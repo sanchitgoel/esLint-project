@@ -3,7 +3,7 @@
 
 
 //Import Statements
-import React from 'react';
+import React from "react";
 import ReactDOM from "react-dom";
 import HeaderNav from "../components/HeaderNav.js";
 import SearchPanel from "../components/SearchPanel.js";
@@ -11,19 +11,19 @@ import SearchPanel from "../components/SearchPanel.js";
 // SearchList Class created which extends component from class "React"
 class SearchList extends React.Component {
 	
-	render() {
+  render() {
 		
-		//Styles in React
-		let verticalMargin =  {margin:"100px 0"};
+    //Styles in React
+    let verticalMargin =  {margin:"100px 0"};
 		
 	  	return (
 		  <div style={verticalMargin}>
-			<HeaderNav />
-			<main className="container">			
-				<SearchPanel />
-			</main>
+        <HeaderNav />
+        <main className="container">			
+          <SearchPanel />
+        </main>
 		  </div>
-		);
+    );
   	 }
 }
 

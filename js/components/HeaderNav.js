@@ -2,54 +2,54 @@
 
 
 //Import Statements
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {  Link } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import {  Link } from "react-router-dom";
 class HeaderNav extends React.Component {
-   constructor(){
+  constructor(){
 	   super();
 	   
 	   //Initial Value to set the state 
 	   this.state = {
 		   collapsed : true
-	   }
-   }
+	   };
+  }
 	
-	//Local Methos
-	toggleCollapse(){
-		this.setState({collapsed: !this.state.collapsed});
-	}
+  //Local Methos
+  toggleCollapse(){
+    this.setState({collapsed: !this.state.collapsed});
+  }
 	
-	render() {
+  render() {
 	
-	let navClass = this.state.collapsed ? "collapse" : "";	
+    let navClass = this.state.collapsed ? "collapse" : "";	
 		
-      return (
-         <nav className="navbar navbar-default navbar-fixed-top">
+    return (
+      <nav className="navbar navbar-default navbar-fixed-top">
 		  <div className="container-fluid">
-			<div className="navbar-header">
+          <div className="navbar-header">
 			  <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)}>
-				<span className="sr-only">Toggle navigation</span>
-				<span className="icon-bar"></span>
-				<span className="icon-bar"></span>
-				<span className="icon-bar"></span>
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
 			  </button>
 			  <a className="navbar-brand" href="#">Food Report</a>
-			</div>
+          </div>
 
 			  
-			<div className={"navbar-collapse " + navClass}>
+          <div className={"navbar-collapse " + navClass}>
 			 <ul className="nav navbar-nav navbar-right">
 				 <li><Link to="/" >Home</Link></li>
 				 <li><Link to="favourite" >Favourite</Link></li>
 				
 				
 			  </ul>
-			</div> 
+          </div> 
 		  </div> 
-		</nav>
-      );
-   }
+      </nav>
+    );
+  }
 }
 
 //Exporting Class to be used by other layouts and main.js

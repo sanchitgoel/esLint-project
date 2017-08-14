@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --hot",
     "dev": "webpack -d --watch",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "eslint": "eslint js"
   },
   "author": "sanchit goel",
   "license": "ISC",
