@@ -14,11 +14,11 @@ import {   BrowserRouter as Router,  Route, browserHistory} from "react-router-d
 ReactDOM.render(
   <Router history={browserHistory}>
     <div>
-      	<Route exact path="/" component={SearchList}/>
+      <Route exact path="/" component={SearchList}/>
       <Route path="/details/:foodID" component={Details}/>
       <Route path="/favourite" component={Favourite}/>
     </div>
   </Router>
   , document.getElementById("app"));
-			
+      
 

@@ -8,18 +8,18 @@ import ReactDOM from "react-dom";
 // Favourite Class created which extends component from class "React"
 class Footer extends React.Component {
   render(){
-	
+  
     let paginationStyle = {
       margin: 10
     };
     return(
       <footer className="navbar-fixed-bottom navbar-inverse">
         <nav aria-label="navigation">
-				  <ul className="pagination pagination-sm" style={paginationStyle}>
+          <ul className="pagination pagination-sm" style={paginationStyle}>
             <li>
-					  <a href="#" aria-label="Previous">
+              <a href="#" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
-					  </a>
+              </a>
             </li>
             <li><a href="#" className="active">1</a></li>
             <li><a href="#">2</a></li>
@@ -28,13 +28,13 @@ class Footer extends React.Component {
             <li>
               <a href="#" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
-					  </a>
+              </a>
             </li>
-				  </ul>
+          </ul>
         </nav>
       </footer>
     );
-	
+  
   }
 
 }

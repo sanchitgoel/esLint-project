@@ -33,7 +33,7 @@
             "always"
         ],
         "no-unused-vars":"off",
-        "no-mixed-spaces-and-tabs":"off",
+        //"no-mixed-spaces-and-tabs":"off",
         "no-undef":"off"
     }
 }

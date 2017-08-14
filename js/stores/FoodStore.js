@@ -8,28 +8,28 @@ import * as FoodActions from "../actions/FoodActions.js";
 
 //Creating Class for FoodStore, it wil extend EventEmitter Class provided by node
 class FoodStore extends EventEmitter{
-	
+  
   //Constuctor Method
   constructor(){
     super();
     //Starts: Inital Values to call at first time load of the Components
-		
+    
     //For: Food List 
     FoodActions.searchFood();
-		
+    
     //For Favourite Food
     this.foodFoodList = [];
-		
-    let localData = (localStorage.getItem("favItems"))?	localStorage.getItem("favItems").split(",") : [];
+    
+    let localData = (localStorage.getItem("favItems"))?  localStorage.getItem("favItems").split(",") : [];
     localData.map(function(obj,i){
       if(obj !== "null")
-        FoodActions.foodDetails(obj,"fav");	
+        FoodActions.foodDetails(obj,"fav");  
     });
-		
+    
     //Ends: Inital Values to call at first time load of the Components
-		
+    
   }
-	
+  
   //Starts: Methods Called by Components to Fetch the Data
   getAll(){
     return this.foodList;
@@ -41,8 +41,8 @@ class FoodStore extends EventEmitter{
     return this.foodFoodList;
   }
   //Ends: Methods Called by Components to Fetch the Data
-	
-	
+  
+  
   //Starts: CHange Handlers
   updateSearchResults(resultList){
     this.foodList = resultList;
@@ -63,11 +63,11 @@ class FoodStore extends EventEmitter{
         reqIndex = i;
     });
     this.foodFoodList.splice(reqIndex,1);
-		
+    
   }
   //Ends: CHange Handlers
-	
-	
+  
+  
   //Starts: Action Handlers
   //All the Events fired by Actions will be handle here
   handleActions(action){
@@ -91,7 +91,7 @@ class FoodStore extends EventEmitter{
     }
   }
   //Ends: Action Handlers
-	
+  
 }
 
 //Registering foodStore with Dispatcher

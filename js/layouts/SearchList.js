@@ -10,21 +10,21 @@ import SearchPanel from "../components/SearchPanel.js";
 
 // SearchList Class created which extends component from class "React"
 class SearchList extends React.Component {
-	
+  
   render() {
-		
+    
     //Styles in React
     let verticalMargin =  {margin:"100px 0"};
-		
-	  	return (
-		  <div style={verticalMargin}>
+    
+    return (
+      <div style={verticalMargin}>
         <HeaderNav />
-        <main className="container">			
+        <main className="container">      
           <SearchPanel />
         </main>
-		  </div>
+      </div>
     );
-  	 }
+  }
 }
 
 //Exporting Class to be used by other layouts and main.js
