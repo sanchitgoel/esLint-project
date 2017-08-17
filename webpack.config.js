@@ -11,6 +11,12 @@ var config = {
     path: BUILD_DIR + "/js",
     filename: 'bundle.js'
   },
+  devServer: {
+      inline: true,
+      port: 8080,
+      hot: true
+
+   },
 	module : {
     loaders : [
       {
