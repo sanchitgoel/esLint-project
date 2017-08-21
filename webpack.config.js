@@ -8,25 +8,28 @@ var APP_DIR = path.resolve(__dirname, '');
 var config = {
   entry: APP_DIR + '/js/main.js',
   output: {
-    path: BUILD_DIR + "/js",
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "js"),
+    publicPath: "/js/",
+    filename: "bundle.js"
   },
-  devServer: {
+  /*devServer: {
       inline: true,
       port: 8080,
       hot: true
 
-   },
+   },*/
 	module : {
     loaders : [
       {
-        test : /\.jsx?/,
-        include : APP_DIR,
-        loader : 'babel-loader',
-		  query: {
+          test : /\.jsx?/,
+          include : APP_DIR,
+          loader : 'babel-loader',
+		      query: {
                presets: ['es2015', 'react']
             }
-      }
+      },
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.less$/, loader: "style-loader!css-loader!less-loader" }
     ]
   }
 };

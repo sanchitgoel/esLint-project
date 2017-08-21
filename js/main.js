@@ -1,4 +1,4 @@
-// Main Js: Index template 
+// Main Js: Index template
 // Used to render the application in HTML Page
 
 // Import Statements
@@ -8,9 +8,10 @@ import SearchList from "./layouts/SearchList.js";
 import Details from "./layouts/Details.js";
 import Favourite from "./layouts/Favourite.js";
 import {   BrowserRouter as Router,  Route, browserHistory} from "react-router-dom";
+require("../css/less/styles.less");
 
 
-//Rendering DOM VIA Router, Different Pages to display when Paramerters change's in URL 
+//Rendering DOM VIA Router, Different Pages to display when Paramerters change's in URL
 ReactDOM.render(
   <Router history={browserHistory}>
     <div>
@@ -20,5 +21,3 @@ ReactDOM.render(
     </div>
   </Router>
   , document.getElementById("app"));
-      
-
