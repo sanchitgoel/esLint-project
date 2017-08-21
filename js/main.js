@@ -8,7 +8,7 @@ import SearchList from "./layouts/SearchList.js";
 import Details from "./layouts/Details.js";
 import Favourite from "./layouts/Favourite.js";
 import {   BrowserRouter as Router,  Route, browserHistory} from "react-router-dom";
-require("../css/less/styles.less");
+import "../css/less/styles.less";
 
 
 //Rendering DOM VIA Router, Different Pages to display when Paramerters change's in URL
