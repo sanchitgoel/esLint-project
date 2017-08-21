@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
-
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var BUILD_DIR = path.resolve(__dirname, '');
 var APP_DIR = path.resolve(__dirname, '');
 
@@ -28,8 +28,16 @@ var config = {
                presets: ['es2015', 'react']
             }
       },
-      { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.less$/, loader: "style-loader!css-loader!less-loader" },
+      //{ test: /\.css$/, loader: "style-loader!css-loader" },
+      //{ test: /\.less$/, loader: "style-loader!css-loader!less-loader" },
+      {
+          test: /\.(css|less)$/ ,
+          loader: ExtractTextPlugin.extract({
+            use: ['css-loader', 'less-loader'],
+                       fallback: 'style-loader',
+          })
+
+      },
       {
         enforce: "pre",
         test: /\.js$/,
@@ -40,7 +48,11 @@ var config = {
         }
       }
     ]
-  }
+
+  },
+  plugins: [
+        new ExtractTextPlugin("styles.css")
+    ]
 };
 
 module.exports = config;
