@@ -29,7 +29,16 @@ var config = {
             }
       },
       { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.less$/, loader: "style-loader!css-loader!less-loader" }
+      { test: /\.less$/, loader: "style-loader!css-loader!less-loader" },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          fix:true
+        }
+      }
     ]
   }
 };
