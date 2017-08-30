@@ -1,1 +1,10 @@
-.myclass{font-size:20px;color:green}.appendBottom10{margin-bottom:10px}.text-white{color:#fff}
+.myclass {
+  font-size: 20px;
+  color: green;
+}
+.appendBottom10 {
+  margin-bottom: 10px;
+}
+.text-white {
+  color: #fff;
+}
